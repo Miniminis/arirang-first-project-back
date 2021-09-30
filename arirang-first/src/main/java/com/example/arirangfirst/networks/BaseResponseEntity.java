@@ -35,6 +35,7 @@ public class BaseResponseEntity<T> {
 
     public static <T> BaseResponseEntity<T> ERROR() {
         return (BaseResponseEntity<T>) BaseResponseEntity.builder()
+                .statusCode(HttpStatus.BAD_REQUEST.value())
                 .build();
     }
 

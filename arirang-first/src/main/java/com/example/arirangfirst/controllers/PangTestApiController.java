@@ -8,6 +8,7 @@ import com.example.arirangfirst.networks.responses.QuestionsResDto;
 import com.example.arirangfirst.networks.responses.TestResultResDto;
 import com.example.arirangfirst.services.PangTestService;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
 import javax.transaction.Transactional;
@@ -17,6 +18,7 @@ import javax.validation.Valid;
 @RequestMapping("/v1")
 @RequiredArgsConstructor
 @CrossOrigin
+@Slf4j
 public class PangTestApiController {
 
     private final PangTestService pangTestService;
@@ -37,6 +39,10 @@ public class PangTestApiController {
     @PostMapping("/result")
     @Transactional
     public BaseResponseEntity<TestResultResDto> saveResult(@RequestBody @Valid TestResultReqDto testResultReqDto) {
+        log.info("req" + testResultReqDto);
+        if (testResultReqDto.getAnswerMap().isEmpty()) {
+            return BaseResponseEntity.ERROR();
+        }
         return pangTestService.saveResult(testResultReqDto);
     }
 

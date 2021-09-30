@@ -36,12 +36,12 @@ public class PangTestService {
         Long testId = testResultReqDto.getTestId();
         String testerName = testResultReqDto.getTesterName();
 
-        Map<Long, String> testUserAnswers = testResultReqDto.getAnswerMap();
+        Map<Integer, String> testUserAnswers = testResultReqDto.getAnswerMap();
         Map<Long, String> testRightAnswers = answersQueryRepository.findRightAnswers(testId);
 
         int totalRightCnt = 0;
         for (Long questionId : testRightAnswers.keySet()) {
-            if (testRightAnswers.get(questionId).equals(testUserAnswers.get(questionId))) {
+            if (testRightAnswers.get(questionId).equals(testUserAnswers.get(questionId.intValue()))) {
                 totalRightCnt += 1;
             }
         }

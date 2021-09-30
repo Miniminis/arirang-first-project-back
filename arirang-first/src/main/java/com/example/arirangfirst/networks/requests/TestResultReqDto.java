@@ -5,7 +5,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.validation.Valid;
+import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.util.Map;
 
@@ -20,7 +20,8 @@ public class TestResultReqDto {
 
     private String testerName;
 
-    @Valid
-    private Map<Long, String> answerMap;
+    @NotNull
+    private Map<Integer, String> answerMap;
 
 }
+
