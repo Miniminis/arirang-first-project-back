@@ -1,7 +1,6 @@
 package com.example.arirangfirst.networks.responses;
 
 import com.querydsl.core.annotations.QueryProjection;
-import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,8 +8,9 @@ import lombok.NoArgsConstructor;
 @Getter
 @Builder
 @NoArgsConstructor
-@AllArgsConstructor
 public class CertificateResDto {
+
+    private Long resultId;
 
     private String testerName;
 
@@ -24,23 +24,19 @@ public class CertificateResDto {
 
     private Float passRate;
 
-
+    private Integer level;
 
     @QueryProjection
-    public CertificateResDto(String certificateImgUrl,
-                             String title,
-                             String content,
-                             Float passRate) {
+    public CertificateResDto(Long resultId, String testerName, Integer totalRightCnt, String certificateImgUrl,
+                             String title, String content, Float passRate, Integer level) {
+        this.resultId = resultId;
+        this.testerName = testerName;
+        this.totalRightCnt = totalRightCnt;
         this.certificateImgUrl = certificateImgUrl;
         this.title = title;
         this.content = content;
         this.passRate = passRate;
+        this.level = level;
     }
-
-    public void buildTesterInfo(String testerName, Integer totalRightCnt) {
-        this.testerName = testerName;
-        this.totalRightCnt = totalRightCnt;
-    }
-
 
 }

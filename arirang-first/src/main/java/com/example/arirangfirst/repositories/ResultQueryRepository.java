@@ -21,12 +21,14 @@ public class ResultQueryRepository {
                 .leftJoin(result.certificate, certificate)
                 .where(result.resultId.eq(resultId))
                 .select(Projections.fields(CertificateResDto.class,
+                        result.resultId,
                         result.testerName,
                         result.totalRightCnt,
                         certificate.imgUrl,
                         certificate.title,
                         certificate.content,
-                        certificate.passRate
+                        certificate.passRate,
+                        certificate.level
                         ))
                 .fetchOne();
     }

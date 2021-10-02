@@ -13,8 +13,8 @@ public class QCertificateResDto extends ConstructorExpression<CertificateResDto>
 
     private static final long serialVersionUID = 796865982L;
 
-    public QCertificateResDto(com.querydsl.core.types.Expression<String> certificateImgUrl, com.querydsl.core.types.Expression<String> title, com.querydsl.core.types.Expression<String> content, com.querydsl.core.types.Expression<Float> passRate) {
-        super(CertificateResDto.class, new Class<?>[]{String.class, String.class, String.class, float.class}, certificateImgUrl, title, content, passRate);
+    public QCertificateResDto(com.querydsl.core.types.Expression<Long> resultId, com.querydsl.core.types.Expression<String> testerName, com.querydsl.core.types.Expression<Integer> totalRightCnt, com.querydsl.core.types.Expression<String> certificateImgUrl, com.querydsl.core.types.Expression<String> title, com.querydsl.core.types.Expression<String> content, com.querydsl.core.types.Expression<Float> passRate, com.querydsl.core.types.Expression<Integer> level) {
+        super(CertificateResDto.class, new Class<?>[]{long.class, String.class, int.class, String.class, String.class, String.class, float.class, int.class}, resultId, testerName, totalRightCnt, certificateImgUrl, title, content, passRate, level);
     }
 
 }
