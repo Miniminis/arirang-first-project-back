@@ -1,7 +1,6 @@
 package com.example.arirangfirst.repositories;
 
 import com.example.arirangfirst.networks.responses.CertificateResDto;
-import com.example.arirangfirst.networks.responses.ResultResDto;
 import com.querydsl.core.types.Projections;
 import com.querydsl.jpa.impl.JPAQueryFactory;
 import lombok.RequiredArgsConstructor;
