@@ -29,6 +29,7 @@ public class PangTestApiController {
      * */
     @GetMapping("/questions")
     public BaseResponseEntity<QuestionsInfoResDto> getQuestions() {
+        log.info("test");
         return pangTestService.getQuestionsInfo();
     }
 
