@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
 @Slf4j
-@WebFilter(urlPatterns = { "/v1/result/*" })
+@WebFilter(urlPatterns = { "/v1/*" })
 public class GlobalFilter implements Filter {
     @Override
     public void doFilter(ServletRequest request,
