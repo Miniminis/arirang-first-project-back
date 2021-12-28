@@ -21,6 +21,7 @@ artifacts:
     - build/libs/*.jar
     - scripts/**
   discard-paths: yes
+  base-directory: arirang-first
 
 cache:
   paths:
