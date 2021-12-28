@@ -1,3 +1,11 @@
+
+SELECT * FROM arirang_first.result where total_right_cnt >=9;
+
+
+
+
+
+
 SELECT * FROM arirang_first.question;
 -- insert into arirang_first.question values 
 --     (0, 1, 'NUMBER', 3, '다음중 서울이 본점인 빵집을 선택해주세요.', 'Y'),
