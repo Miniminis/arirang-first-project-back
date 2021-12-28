@@ -37,6 +37,7 @@ phases:
     commands:
       - echo Entered the build phase...
       - echo Build Starting on `date`
+      - cd arirang-first
       - chmod +x ./gradlew
       - ./gradlew clean build -x test
   post_build:
