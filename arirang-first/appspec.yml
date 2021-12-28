@@ -2,11 +2,11 @@
 version: 0.0
 os: linux
 files:
-  - source: /
+  - source: arirang-first/
     destination: /home/ubuntu/arirang-first/build/
 
 permissions:
-  - object: /
+  - object: arirang-first/
     pattern : "**"
     mode : 755
     owner : ubuntu
