@@ -56,9 +56,9 @@ phases:
     #file-format: JunitXml | CucumberJson
     artifacts:
       files:
-       - appspec.yml
-       - build/libs/*.jar
-       - scripts/**
+       - arirang-first/appspec.yml
+       - arirang-first/build/libs/*.jar
+       - arirang-first/scripts/**
     #name: $(date +%Y-%m-%d)
       discard-paths: yes
     #base-directory: location
